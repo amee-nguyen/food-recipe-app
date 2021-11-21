@@ -496,41 +496,55 @@ body {
 }
 
 
-/* HEART ICON */
+/* ABOUT-US BUTTON */
 
-.icon a {
-    float: right;
-    cursor: pointer;
-    /* margin-left: 5rem; */
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 4.5rem;
-    text-align: center;
-    font-size: 2rem;
+.about a {
+    right: 10px;
+    top: 10px;
+    float:right;
     color: var(--tenne-tawny);
-    border-radius: 50%;
-    background: rgb(240, 236, 236);
     text-decoration: none;
+    border: 1px solid var(--tenne-tawny);
+    border-radius: 30px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: black;
+    font-weight: 700;
+    font-size: 5px;
+    background-color: #fff;
+    padding: 5px 12px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+.about a span {
+    font-size: 10px;
+    position: relative;
+    z-index: 1;
 }
 
-.icon:hover {
-    opacity: .5;
-}
-
-/* LIKE BUTTON */
-
-/* .like {
-    width: 48px;
-    height: 48px;
+.about a::after {
+    content: "";
     position: absolute;
-    top: 2%;
-    right: 2%;
-}
-.like-no {
-    background: url("/image/dislike.png") no-repeat;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: var(--tenne-tawny);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-38%) rotate(50deg);
+    transform: translateX(-98%) translateY(-38%) rotate(50deg) ;
 }
 
-.like-yes {
-    background: url("/image/like.png") no-repeat;
 
-} */
+
+.about a:hover::after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
