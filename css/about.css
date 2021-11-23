@@ -8,6 +8,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     min-height: 100vh;
     display: flex;
@@ -15,6 +17,10 @@ body {
     justify-content: center;
     background-color: #f1f1f1;
 }
+
+/* HOME BUTTON */
+
+
 
 /* ABOUT SECTION */
 
