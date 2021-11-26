@@ -28,6 +28,15 @@ function getMealList(){
                         <div class = "meal-name">
                             <h3>${meal.strMeal}</h3>
                             <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <a href = "#" class = "add-fav-btn" id = "add-to-Fav">Like</a>
+                            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+                            <script type="text/javascipt">
+                                $(document).ready(funtion(){
+                                    $('a').click(funtion(){
+                                    $('a').toggleClass('add-fav-btn')
+                                    })
+                                })
+                            </script>
                         </div>
                     </div>
                 `;
@@ -53,33 +62,6 @@ function getMealRecipe(e){
         .then(data => mealRecipeModal(data.meals));
     }
 }
-
-// const listenForLikes = () => {
-//     const likes = document.querySelectorAll(".like");
-//     likes.forEach(like => {
-//         like.addEventListener("click", (event) => {
-//             event.target.classList.toggle("like-no");
-//             event.target.classList.toggle("like-yes");
-//             if(event.target.classList.contains("like-yes")) {
-//                 console.log("Saving Favorite");
-//                 getFaveData(event.target);
-//             } else {
-//                 console.log("Removing Favorite");
-//                 getFaveData(event.target);
-//             }
-//         })
-
-//     })
-// }
-
-// const getFaveData = (elem) => {
-//     const parent = elem.parentElement;
-//     const name = parent.querySelector('h2').textContent;
-//     const img = parent.querySelector('img').src;
-//     const faveObj = {img, name};
-//     console.log(faveObj);
-
-// }
 
 
 // create a modal
